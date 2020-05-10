@@ -59,7 +59,7 @@ namespace Practica1
                 string linea;
                 int cant;
                 linea = Console.ReadLine();
-               
+                
                     try
                     {
                         cant = int.Parse(linea);
@@ -68,14 +68,43 @@ namespace Practica1
                     catch (Exception ex)
                     {
                         Console.WriteLine();
-                       
-                        Console.WriteLine("  Lo sentimos, solo se permiten numeros. reinicie el programa.", ex.Message);
-                       Console.WriteLine();
-                      Environment.Exit(0);
 
+                        Console.WriteLine("    Lo sentimos, solo se permiten numeros.", ex.Message);
+                        Console.WriteLine();
+                    Console.WriteLine("     Responda si o no a la siguiente pregunta:");
+                        Console.WriteLine();
+                       Console.Write("   Volver al menu principal?  ");
+                         string choice = Console.ReadLine();
+                        switch (choice)
+                        {
+                              case "si":
+                               PrincipalMethod();
+                                break;
+
+                                case "s":
+                                PrincipalMethod();
+                                     break;
+
+                            case "no":
+                            Console.WriteLine();
+                            Console.Write("   Presione Enter para salir: ");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                            break;
+
+                                case "n":
+                            Console.WriteLine();
+                            Console.Write("   Presione Enter para salir: ");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                            break;         
+
+                         }
+
+                    
                     }
-                  
 
+                
                 for (int f = 0; f < lista1.Length; f++)
                 {
                     Console.WriteLine();
@@ -86,11 +115,8 @@ namespace Practica1
                   
                 }
 
-
-
                 #region //Insertion Sort lista 1
        
-              
                 InsertionSort(lista1);
                 #endregion
                 Console.WriteLine("");
@@ -116,7 +142,35 @@ namespace Practica1
 
                     Console.WriteLine("  Lo sentimos, solo se permiten numeros. reinicie el programa.", ex.Message);
                     Console.WriteLine();
-                    Environment.Exit(0);
+                    Console.WriteLine("     Responda si o no a la siguiente pregunta:");
+                    Console.WriteLine();
+                    Console.Write("   Volver al menu principal?  ");
+                    string choice = Console.ReadLine();
+                    switch (choice)
+                    {
+                        case "si":
+                            PrincipalMethod();
+                            break;
+
+                        case "s":
+                            PrincipalMethod();
+                            break;
+
+                        case "no":
+                            Console.WriteLine();
+                            Console.Write("   Presione Enter para salir: ");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                            break;
+
+                        case "n":
+                            Console.WriteLine();
+                            Console.Write("   Presione Enter para salir: ");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                            break;
+
+                    }
 
                 }
         
@@ -212,7 +266,35 @@ namespace Practica1
 
                     Console.WriteLine("  Lo sentimos, solo se permiten numeros. reinicie el programa.", ex.Message);
                     Console.WriteLine();
-                    Environment.Exit(0);
+                    Console.WriteLine("     Responda si o no a la siguiente pregunta:");
+                    Console.WriteLine();
+                    Console.Write("   Volver al menu principal?  ");
+                    string choice = Console.ReadLine();
+                    switch (choice)
+                    {
+                        case "si":
+                            PrincipalMethod();
+                            break;
+
+                        case "s":
+                            PrincipalMethod();
+                            break;
+
+                        case "no":
+                            Console.WriteLine();
+                            Console.Write("   Presione Enter para salir: ");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                            break;
+
+                        case "n":
+                            Console.WriteLine();
+                            Console.Write("   Presione Enter para salir: ");
+                            Console.ReadKey();
+                            Environment.Exit(0);
+                            break;
+
+                    }
 
                 }
                 Console.WriteLine();
