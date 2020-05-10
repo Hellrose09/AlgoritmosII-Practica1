@@ -16,7 +16,30 @@ namespace Practica1
        
         
         static string Resp;
-        public  void Method()
+
+        private static void InsertionSort(int[] arr)
+        {
+            int aux;
+            int j;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                aux = arr[i];
+                j = i - 1;
+                while (j >= 0 && arr[j] > aux)
+                {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+
+                arr[j + 1] = aux;
+
+            }
+
+
+
+        }
+        public  void PrincipalMethod()
         {
             #region // Menu
             do
@@ -63,24 +86,12 @@ namespace Practica1
                   
                 }
 
-               
+
 
                 #region //Insertion Sort lista 1
-                int auxili;
-                int j;
-                for (int i = 0; i < lista1.Length; i++)
-                {
-                    auxili = lista1[i];
-                    j = i - 1;
-                    while (j >= 0 && lista1[j] > auxili)
-                    {
-                        lista1[j + 1] = lista1[j];
-                        j--;
-                    }
-                    lista1[j + 1] = auxili;
-
-
-                }
+       
+              
+                InsertionSort(lista1);
                 #endregion
                 Console.WriteLine("");
                 #endregion
@@ -120,21 +131,8 @@ namespace Practica1
                   
                 }
                 #region // Insertion Sort lista 2
-                int aux;
-                int k; 
-                for (int i = 0; i < lista2.Length; i++)
-                {
-                    aux = lista2[i];
-                    k= i - 1;
-                    while (k >= 0 && lista2[k] > aux)
-                    {
-                        lista2[k + 1] = lista2[k];
-                        k--;
-                    }
-                    lista2[k + 1] = aux;
-
-                }
-
+            
+                InsertionSort(lista2);
 
                 #endregion
                 #endregion
@@ -157,21 +155,8 @@ namespace Practica1
                     short opcion = short.Parse(Console.ReadLine());
                     if (opcion == 1)
                     {
-                        int a;
-                        int b;
-                        for (int i = 0; i < mix.Length; i++)
-                        {
-                            a = mix[i];
-                            b = i - 1;
-                            while (b >= 0 && mix[b] > a)
-                            {
-                                mix[b + 1] = mix[b];
-                                b--;
-                            }
-                            mix[b + 1] = a;
+                        InsertionSort(mix);
 
-
-                        }
                         Console.WriteLine();
                         Console.WriteLine("   Lista ordenada en forma ascendente");
                         Console.WriteLine();
@@ -245,9 +230,6 @@ namespace Practica1
 
 
             } while (Resp == "s" || Resp == "si");
-            
-
-          
             
 
         }

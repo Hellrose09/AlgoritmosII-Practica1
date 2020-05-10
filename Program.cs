@@ -13,7 +13,7 @@ namespace Practica1
             do
             {
                 Ejercicio1 ejercicio1 = new Ejercicio1();
-                ejercicio1.Method();
+                ejercicio1.PrincipalMethod();
 
 
                 Console.Clear();
