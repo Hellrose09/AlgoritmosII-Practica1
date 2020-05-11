@@ -9,37 +9,51 @@ namespace Practica1
 
         static void Main(string[] args)
         {
-          
-            do
+            while (true)
             {
-                Ejercicio1 ejercicio1 = new Ejercicio1();
-                ejercicio1.PrincipalMethod();
-
-
                 Console.Clear();
                 Console.WriteLine();
-                Console.Write("Presione Enter para continuar con el siguiente ejercicio: ");
-                Console.Read();
-                Console.Clear();
+                Console.WriteLine("--------------BIENVENIDO AL PROGRAMA----------------");
+                Console.WriteLine();
+                Console.WriteLine("    1. Ordenar dos arreglos.");
+                Console.WriteLine("    2. Tuercas y tornillos. ");
+                Console.WriteLine("    3. Salir.");
+                Console.WriteLine("----------------------------------------------------");
+                Console.Write("         Elija la opcion que desea[1-3] : ");
 
-                do
+                int choice = int.Parse(Console.ReadLine());
+
+
+                switch (choice)
                 {
-                    char[] tuercas = { 'a', 'b', 'c', 'e', 'f', 'g' };
-                    char[] tornillos = { 'c', 'e', 'g', 'f', 'a', 'b' };
 
-                    Ejercicio2 ejercicio2 = new Ejercicio2();
-                    ejercicio2.Pares(tuercas, tornillos, 0, 5);
+                    case 1:
+                        Ejercicio1 ejercicio1 = new Ejercicio1();
+                        ejercicio1.PrincipalMethod();
+                        break;
 
-                    Console.WriteLine();
-                    Console.Write("  ¿Desea reiniciar el programa? (si o no): ");
-                     Opcion = Console.ReadLine().ToLower();
-                     Console.WriteLine("");
+                    case 2:
+                        char[] tuercas = { 'a', 'b', 'c', 'e', 'f', 'g' };
+                        char[] tornillos = { 'c', 'e', 'g', 'f', 'a', 'b' };
 
-                } while (Opcion != "s" && Opcion != "n" && Opcion != "si" && Opcion != "no");
+                        Ejercicio2 ejercicio2 = new Ejercicio2();
+                        ejercicio2.Pares(tuercas, tornillos, 0, 5);
+                        Console.ReadKey();
+
+                        break;
+
+                    case 3:
+
+                        Environment.Exit(0);
+                        break;
+                }
 
 
-            } while (Opcion == "s" || Opcion == "si");
-           
+
+            }
+
+
+
 
 
 
@@ -47,3 +61,4 @@ namespace Practica1
         }
     }
 }
+
