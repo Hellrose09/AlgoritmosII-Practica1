@@ -13,7 +13,7 @@ namespace Practica1
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine("--------------BIENVENIDO AL PROGRAMA----------------");
+                Console.WriteLine("-------------BIENVENIDO AL PROGRAMA---------------");
                 Console.WriteLine();
                 Console.WriteLine("    1. Ordenar dos arreglos.");
                 Console.WriteLine("    2. Tuercas y tornillos. ");
